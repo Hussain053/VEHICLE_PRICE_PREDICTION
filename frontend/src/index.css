@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #08111f;
+  --color-panel: #101d2d;
+  --color-line: #26384e;
+  --color-electric: #63a5ff;
+  --color-mist: #a8b6c8;
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Manrope", sans-serif;
+  --shadow-card: 0 24px 70px rgba(0, 0, 0, .24);
+}
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #f8fafc;
+  background: #08111f;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input, select { font: inherit; }
+::selection { color: #08111f; background: #8fc1ff; }
+
+.ambient {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 9999px;
+  filter: blur(95px);
+  opacity: .11;
+}
+.ambient-one { width: 420px; height: 300px; top: 5rem; right: 3%; background: #287de8; }
+.ambient-two { width: 280px; height: 240px; top: 42rem; left: -8rem; background: #134d91; opacity: .07; }
+
+.field-control {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid #34465c;
+  border-radius: 10px;
+  background-color: #0b1727;
+  padding: 0 14px;
+  color: #f8fafc;
+  font-size: 14px;
+  line-height: 1.4;
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+.field-control::placeholder { color: #718198; opacity: 1; }
+.field-control:hover:not(:disabled) { border-color: #526b88; background-color: #0d1a2b; }
+.field-control:focus { border-color: #63a5ff; box-shadow: 0 0 0 3px rgba(99,165,255,.17); }
+.field-control:disabled { cursor: not-allowed; color: #8794a5; opacity: .6; }
+.field-control option { background: #0b1727; color: #f8fafc; }
+input[type="number"] { appearance: textfield; -moz-appearance: textfield; }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { appearance: none; -webkit-appearance: none; margin: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}

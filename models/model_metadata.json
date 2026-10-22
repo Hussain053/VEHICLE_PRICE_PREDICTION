@@ -1,0 +1,1799 @@
+{
+  "features": [
+    "company",
+    "model",
+    "fuel_type",
+    "transmission",
+    "owner_type",
+    "city",
+    "seller_type",
+    "vehicle_age",
+    "km_driven",
+    "mileage",
+    "seating_capacity",
+    "horsepower",
+    "engine_cc"
+  ],
+  "numeric_features": [
+    "vehicle_age",
+    "km_driven",
+    "mileage",
+    "seating_capacity",
+    "horsepower",
+    "engine_cc"
+  ],
+  "categorical_features": [
+    "company",
+    "model",
+    "fuel_type",
+    "transmission",
+    "owner_type",
+    "city",
+    "seller_type"
+  ],
+  "reference_year": 2026,
+  "target": "listed_price",
+  "selected_model": "Tuned Random Forest",
+  "best_params": {
+    "model__n_estimators": 60,
+    "model__min_samples_leaf": 1,
+    "model__max_features": 0.9
+  },
+  "untuned_cv_mae_inr": 101930.61930586235,
+  "tuned_cv_mae_inr": 99788.32568941933,
+  "selected_cv_mae_inr": 99788.32568941933,
+  "test_metrics": {
+    "MAE_INR": 101639.7030830973,
+    "RMSE_INR": 949560.3398731262,
+    "MSE_INR2": 901664839059.9669,
+    "R2": 0.5338400357224857
+  },
+  "train_rows": 29163,
+  "test_rows": 7291,
+  "audit": {
+    "joined_rows": 37813,
+    "usable_rows": 36454,
+    "excluded_rows": 1359,
+    "unsupported_or_missing_mileage_rows": 235,
+    "missing_mileage_rows": 901,
+    "zero_engine_displacement_rows": 104,
+    "malformed_engine_displacement_under_100cc_rows": 105,
+    "target_outlier_rule": "1 <= listed_price <= 100000000 INR",
+    "age_reference_year": 2026,
+    "features": [
+      "company",
+      "model",
+      "fuel_type",
+      "transmission",
+      "owner_type",
+      "city",
+      "seller_type",
+      "vehicle_age",
+      "km_driven",
+      "mileage",
+      "seating_capacity",
+      "horsepower",
+      "engine_cc"
+    ]
+  },
+  "options": {
+    "companies": [
+      {
+        "value": "aston martin",
+        "label": "Aston Martin",
+        "models": [
+          {
+            "value": "aston martin vantage",
+            "label": "Vantage"
+          }
+        ]
+      },
+      {
+        "value": "audi",
+        "label": "Audi",
+        "models": [
+          {
+            "value": "audi a3",
+            "label": "A3"
+          },
+          {
+            "value": "audi a3 cabriolet",
+            "label": "A3 Cabriolet"
+          },
+          {
+            "value": "audi a4",
+            "label": "A4"
+          },
+          {
+            "value": "audi a5",
+            "label": "A5"
+          },
+          {
+            "value": "audi a6",
+            "label": "A6"
+          },
+          {
+            "value": "audi a7",
+            "label": "A7"
+          },
+          {
+            "value": "audi a8",
+            "label": "A8"
+          },
+          {
+            "value": "audi a8 2010-2013",
+            "label": "A8 2010-2013"
+          },
+          {
+            "value": "audi q3",
+            "label": "Q3"
+          },
+          {
+            "value": "audi q5",
+            "label": "Q5"
+          },
+          {
+            "value": "audi q7",
+            "label": "Q7"
+          },
+          {
+            "value": "audi q8",
+            "label": "Q8"
+          },
+          {
+            "value": "audi s5",
+            "label": "S5"
+          },
+          {
+            "value": "audi tt",
+            "label": "Tt"
+          }
+        ]
+      },
+      {
+        "value": "bentley",
+        "label": "Bentley",
+        "models": [
+          {
+            "value": "bentley continental",
+            "label": "Continental"
+          }
+        ]
+      },
+      {
+        "value": "bmw",
+        "label": "BMW",
+        "models": [
+          {
+            "value": "bmw 1 series",
+            "label": "1 Series"
+          },
+          {
+            "value": "bmw 2 series",
+            "label": "2 Series"
+          },
+          {
+            "value": "bmw 3 series",
+            "label": "3 Series"
+          },
+          {
+            "value": "bmw 3 series gran limousine",
+            "label": "3 Series Gran Limousine"
+          },
+          {
+            "value": "bmw 3 series gt",
+            "label": "3 Series Gt"
+          },
+          {
+            "value": "bmw 5 series",
+            "label": "5 Series"
+          },
+          {
+            "value": "bmw 6 series",
+            "label": "6 Series"
+          },
+          {
+            "value": "bmw 7 series",
+            "label": "7 Series"
+          },
+          {
+            "value": "bmw m series",
+            "label": "M Series"
+          },
+          {
+            "value": "bmw m2",
+            "label": "M2"
+          },
+          {
+            "value": "bmw x1",
+            "label": "X1"
+          },
+          {
+            "value": "bmw x3",
+            "label": "X3"
+          },
+          {
+            "value": "bmw x4",
+            "label": "X4"
+          },
+          {
+            "value": "bmw x5",
+            "label": "X5"
+          },
+          {
+            "value": "bmw x6",
+            "label": "X6"
+          },
+          {
+            "value": "bmw x7",
+            "label": "X7"
+          },
+          {
+            "value": "bmw z4",
+            "label": "Z4"
+          }
+        ]
+      },
+      {
+        "value": "chevrolet",
+        "label": "Chevrolet",
+        "models": [
+          {
+            "value": "chevrolet aveo",
+            "label": "Aveo"
+          },
+          {
+            "value": "chevrolet aveo u-va",
+            "label": "Aveo U-Va"
+          },
+          {
+            "value": "chevrolet beat",
+            "label": "Beat"
+          },
+          {
+            "value": "chevrolet captiva",
+            "label": "Captiva"
+          },
+          {
+            "value": "chevrolet cruze",
+            "label": "Cruze"
+          },
+          {
+            "value": "chevrolet enjoy",
+            "label": "Enjoy"
+          },
+          {
+            "value": "chevrolet optra",
+            "label": "Optra"
+          },
+          {
+            "value": "chevrolet sail",
+            "label": "Sail"
+          },
+          {
+            "value": "chevrolet sail hatchback",
+            "label": "Sail Hatchback"
+          },
+          {
+            "value": "chevrolet spark",
+            "label": "Spark"
+          },
+          {
+            "value": "chevrolet tavera",
+            "label": "Tavera"
+          },
+          {
+            "value": "chevrolet trailblazer",
+            "label": "Trailblazer"
+          }
+        ]
+      },
+      {
+        "value": "datsun",
+        "label": "Datsun",
+        "models": [
+          {
+            "value": "datsun go",
+            "label": "Go"
+          },
+          {
+            "value": "datsun go plus",
+            "label": "Go Plus"
+          },
+          {
+            "value": "datsun redigo",
+            "label": "Redigo"
+          }
+        ]
+      },
+      {
+        "value": "dc",
+        "label": "DC",
+        "models": [
+          {
+            "value": "dc avanti",
+            "label": "Avanti"
+          }
+        ]
+      },
+      {
+        "value": "ferrari",
+        "label": "Ferrari",
+        "models": [
+          {
+            "value": "ferrari 488 gtb",
+            "label": "488 Gtb"
+          }
+        ]
+      },
+      {
+        "value": "fiat",
+        "label": "Fiat",
+        "models": [
+          {
+            "value": "fiat avventura",
+            "label": "Avventura"
+          },
+          {
+            "value": "fiat avventura urban cross",
+            "label": "Avventura Urban Cross"
+          },
+          {
+            "value": "fiat grande punto",
+            "label": "Grande Punto"
+          },
+          {
+            "value": "fiat linea",
+            "label": "Linea"
+          },
+          {
+            "value": "fiat linea classic",
+            "label": "Linea Classic"
+          },
+          {
+            "value": "fiat palio",
+            "label": "Palio"
+          },
+          {
+            "value": "fiat punto",
+            "label": "Punto"
+          },
+          {
+            "value": "fiat punto evo",
+            "label": "Punto Evo"
+          },
+          {
+            "value": "fiat punto pure",
+            "label": "Punto Pure"
+          }
+        ]
+      },
+      {
+        "value": "force",
+        "label": "Force",
+        "models": [
+          {
+            "value": "force gurkha",
+            "label": "Gurkha"
+          },
+          {
+            "value": "force one",
+            "label": "One"
+          }
+        ]
+      },
+      {
+        "value": "ford",
+        "label": "Ford",
+        "models": [
+          {
+            "value": "ford aspire",
+            "label": "Aspire"
+          },
+          {
+            "value": "ford classic",
+            "label": "Classic"
+          },
+          {
+            "value": "ford ecosport",
+            "label": "Ecosport"
+          },
+          {
+            "value": "ford endeavour",
+            "label": "Endeavour"
+          },
+          {
+            "value": "ford fiesta",
+            "label": "Fiesta"
+          },
+          {
+            "value": "ford figo",
+            "label": "Figo"
+          },
+          {
+            "value": "ford freestyle",
+            "label": "Freestyle"
+          },
+          {
+            "value": "ford fusion",
+            "label": "Fusion"
+          },
+          {
+            "value": "ford ikon",
+            "label": "Ikon"
+          },
+          {
+            "value": "ford mustang",
+            "label": "Mustang"
+          }
+        ]
+      },
+      {
+        "value": "hindustan motors",
+        "label": "Hindustan Motors",
+        "models": [
+          {
+            "value": "ambassador",
+            "label": "Ambassador"
+          }
+        ]
+      },
+      {
+        "value": "honda",
+        "label": "Honda",
+        "models": [
+          {
+            "value": "honda accord",
+            "label": "Accord"
+          },
+          {
+            "value": "honda amaze",
+            "label": "Amaze"
+          },
+          {
+            "value": "honda br-v",
+            "label": "Br-V"
+          },
+          {
+            "value": "honda brio",
+            "label": "Brio"
+          },
+          {
+            "value": "honda city",
+            "label": "City"
+          },
+          {
+            "value": "honda civic",
+            "label": "Civic"
+          },
+          {
+            "value": "honda cr-v",
+            "label": "Cr-V"
+          },
+          {
+            "value": "honda jazz",
+            "label": "Jazz"
+          },
+          {
+            "value": "honda mobilio",
+            "label": "Mobilio"
+          },
+          {
+            "value": "honda wr-v",
+            "label": "Wr-V"
+          }
+        ]
+      },
+      {
+        "value": "hyundai",
+        "label": "Hyundai",
+        "models": [
+          {
+            "value": "hyundai accent",
+            "label": "Accent"
+          },
+          {
+            "value": "hyundai alcazar",
+            "label": "Alcazar"
+          },
+          {
+            "value": "hyundai aura",
+            "label": "Aura"
+          },
+          {
+            "value": "hyundai creta",
+            "label": "Creta"
+          },
+          {
+            "value": "hyundai elantra",
+            "label": "Elantra"
+          },
+          {
+            "value": "hyundai elite i20 2018",
+            "label": "Elite I20 2018"
+          },
+          {
+            "value": "hyundai eon",
+            "label": "Eon"
+          },
+          {
+            "value": "hyundai getz",
+            "label": "Getz"
+          },
+          {
+            "value": "hyundai grand i10",
+            "label": "Grand I10"
+          },
+          {
+            "value": "hyundai grand i10 nios",
+            "label": "Grand I10 Nios"
+          },
+          {
+            "value": "hyundai i10",
+            "label": "I10"
+          },
+          {
+            "value": "hyundai i20",
+            "label": "I20"
+          },
+          {
+            "value": "hyundai i20 active",
+            "label": "I20 Active"
+          },
+          {
+            "value": "hyundai i20 n line",
+            "label": "I20 N Line"
+          },
+          {
+            "value": "hyundai santa fe",
+            "label": "Santa Fe"
+          },
+          {
+            "value": "hyundai santro",
+            "label": "Santro"
+          },
+          {
+            "value": "hyundai santro xing",
+            "label": "Santro Xing"
+          },
+          {
+            "value": "hyundai sonata",
+            "label": "Sonata"
+          },
+          {
+            "value": "hyundai tucson",
+            "label": "Tucson"
+          },
+          {
+            "value": "hyundai venue",
+            "label": "Venue"
+          },
+          {
+            "value": "hyundai verna",
+            "label": "Verna"
+          },
+          {
+            "value": "hyundai xcent",
+            "label": "Xcent"
+          },
+          {
+            "value": "hyundai xcent prime",
+            "label": "Xcent Prime"
+          }
+        ]
+      },
+      {
+        "value": "icml",
+        "label": "ICML",
+        "models": [
+          {
+            "value": "icml extreme",
+            "label": "Extreme"
+          },
+          {
+            "value": "icml rhino rx",
+            "label": "Rhino Rx"
+          }
+        ]
+      },
+      {
+        "value": "isuzu",
+        "label": "Isuzu",
+        "models": [
+          {
+            "value": "isuzu d-max",
+            "label": "D-Max"
+          },
+          {
+            "value": "isuzu mu 7",
+            "label": "Mu 7"
+          },
+          {
+            "value": "isuzu mu-x",
+            "label": "Mu-X"
+          }
+        ]
+      },
+      {
+        "value": "jaguar",
+        "label": "Jaguar",
+        "models": [
+          {
+            "value": "jaguar f-pace",
+            "label": "F-Pace"
+          },
+          {
+            "value": "jaguar f-type",
+            "label": "F-Type"
+          },
+          {
+            "value": "jaguar xe",
+            "label": "Xe"
+          },
+          {
+            "value": "jaguar xf",
+            "label": "Xf"
+          },
+          {
+            "value": "jaguar xj",
+            "label": "Xj"
+          }
+        ]
+      },
+      {
+        "value": "jeep",
+        "label": "Jeep",
+        "models": [
+          {
+            "value": "jeep compass",
+            "label": "Compass"
+          },
+          {
+            "value": "jeep compass trailhawk",
+            "label": "Compass Trailhawk"
+          },
+          {
+            "value": "jeep grand cherokee",
+            "label": "Grand Cherokee"
+          },
+          {
+            "value": "jeep meridian",
+            "label": "Meridian"
+          },
+          {
+            "value": "jeep wrangler",
+            "label": "Wrangler"
+          }
+        ]
+      },
+      {
+        "value": "kia",
+        "label": "Kia",
+        "models": [
+          {
+            "value": "kia carens",
+            "label": "Carens"
+          },
+          {
+            "value": "kia carnival",
+            "label": "Carnival"
+          },
+          {
+            "value": "kia seltos",
+            "label": "Seltos"
+          },
+          {
+            "value": "kia sonet",
+            "label": "Sonet"
+          }
+        ]
+      },
+      {
+        "value": "lamborghini",
+        "label": "Lamborghini",
+        "models": [
+          {
+            "value": "lamborghini huracan",
+            "label": "Huracan"
+          }
+        ]
+      },
+      {
+        "value": "land rover",
+        "label": "Land Rover",
+        "models": [
+          {
+            "value": "land rover discovery",
+            "label": "Discovery"
+          },
+          {
+            "value": "land rover discovery 4",
+            "label": "Discovery 4"
+          },
+          {
+            "value": "land rover discovery sport",
+            "label": "Discovery Sport"
+          },
+          {
+            "value": "land rover freelander 2",
+            "label": "Freelander 2"
+          },
+          {
+            "value": "land rover range rover",
+            "label": "Range Rover"
+          },
+          {
+            "value": "land rover range rover evoque",
+            "label": "Range Rover Evoque"
+          },
+          {
+            "value": "land rover range rover sport",
+            "label": "Range Rover Sport"
+          },
+          {
+            "value": "land rover range rover velar",
+            "label": "Range Rover Velar"
+          }
+        ]
+      },
+      {
+        "value": "lexus",
+        "label": "Lexus",
+        "models": [
+          {
+            "value": "lexus es",
+            "label": "Es"
+          },
+          {
+            "value": "lexus lx",
+            "label": "Lx"
+          },
+          {
+            "value": "lexus nx",
+            "label": "Nx"
+          }
+        ]
+      },
+      {
+        "value": "mahindra",
+        "label": "Mahindra",
+        "models": [
+          {
+            "value": "mahindra alturas g4",
+            "label": "Alturas G4"
+          },
+          {
+            "value": "mahindra bolero",
+            "label": "Bolero"
+          },
+          {
+            "value": "mahindra bolero camper",
+            "label": "Bolero Camper"
+          },
+          {
+            "value": "mahindra bolero maxi truck plus",
+            "label": "Bolero Maxi Truck Plus"
+          },
+          {
+            "value": "mahindra bolero neo",
+            "label": "Bolero Neo"
+          },
+          {
+            "value": "mahindra bolero pik up extra long",
+            "label": "Bolero Pik Up Extra Long"
+          },
+          {
+            "value": "mahindra bolero power plus",
+            "label": "Bolero Power Plus"
+          },
+          {
+            "value": "mahindra kuv 100",
+            "label": "Kuv 100"
+          },
+          {
+            "value": "mahindra kuv 100 nxt",
+            "label": "Kuv 100 Nxt"
+          },
+          {
+            "value": "mahindra logan",
+            "label": "Logan"
+          },
+          {
+            "value": "mahindra marazzo",
+            "label": "Marazzo"
+          },
+          {
+            "value": "mahindra nuvosport",
+            "label": "Nuvosport"
+          },
+          {
+            "value": "mahindra quanto",
+            "label": "Quanto"
+          },
+          {
+            "value": "mahindra scorpio",
+            "label": "Scorpio"
+          },
+          {
+            "value": "mahindra supro",
+            "label": "Supro"
+          },
+          {
+            "value": "mahindra thar",
+            "label": "Thar"
+          },
+          {
+            "value": "mahindra tuv 300",
+            "label": "Tuv 300"
+          },
+          {
+            "value": "mahindra tuv 300 plus",
+            "label": "Tuv 300 Plus"
+          },
+          {
+            "value": "mahindra verito",
+            "label": "Verito"
+          },
+          {
+            "value": "mahindra verito vibe",
+            "label": "Verito Vibe"
+          },
+          {
+            "value": "mahindra xuv300",
+            "label": "Xuv300"
+          },
+          {
+            "value": "mahindra xuv500",
+            "label": "Xuv500"
+          },
+          {
+            "value": "mahindra xylo",
+            "label": "Xylo"
+          }
+        ]
+      },
+      {
+        "value": "mahindra renault",
+        "label": "Mahindra Renault",
+        "models": [
+          {
+            "value": "mahindra renault logan",
+            "label": "Logan"
+          }
+        ]
+      },
+      {
+        "value": "mahindra ssangyong",
+        "label": "Mahindra Ssangyong",
+        "models": [
+          {
+            "value": "mahindra ssangyong rexton",
+            "label": "Rexton"
+          }
+        ]
+      },
+      {
+        "value": "maruti",
+        "label": "Maruti Suzuki",
+        "models": [
+          {
+            "value": "maruti 800",
+            "label": "800"
+          },
+          {
+            "value": "maruti a-star",
+            "label": "A-Star"
+          },
+          {
+            "value": "maruti alto",
+            "label": "Alto"
+          },
+          {
+            "value": "maruti alto 2021",
+            "label": "Alto 2021"
+          },
+          {
+            "value": "maruti alto 800",
+            "label": "Alto 800"
+          },
+          {
+            "value": "maruti alto k10",
+            "label": "Alto K10"
+          },
+          {
+            "value": "maruti baleno",
+            "label": "Baleno"
+          },
+          {
+            "value": "maruti baleno rs",
+            "label": "Baleno Rs"
+          },
+          {
+            "value": "maruti brezza",
+            "label": "Brezza"
+          },
+          {
+            "value": "maruti celerio",
+            "label": "Celerio"
+          },
+          {
+            "value": "maruti celerio x",
+            "label": "Celerio X"
+          },
+          {
+            "value": "maruti ciaz",
+            "label": "Ciaz"
+          },
+          {
+            "value": "maruti ciaz s",
+            "label": "Ciaz S"
+          },
+          {
+            "value": "maruti eeco",
+            "label": "Eeco"
+          },
+          {
+            "value": "maruti ertiga",
+            "label": "Ertiga"
+          },
+          {
+            "value": "maruti esteem",
+            "label": "Esteem"
+          },
+          {
+            "value": "maruti estilo",
+            "label": "Estilo"
+          },
+          {
+            "value": "maruti grand vitara",
+            "label": "Grand Vitara"
+          },
+          {
+            "value": "maruti gypsy",
+            "label": "Gypsy"
+          },
+          {
+            "value": "maruti ignis",
+            "label": "Ignis"
+          },
+          {
+            "value": "maruti kizashi",
+            "label": "Kizashi"
+          },
+          {
+            "value": "maruti omni",
+            "label": "Omni"
+          },
+          {
+            "value": "maruti ritz",
+            "label": "Ritz"
+          },
+          {
+            "value": "maruti s-presso",
+            "label": "S-Presso"
+          },
+          {
+            "value": "maruti swift",
+            "label": "Swift"
+          },
+          {
+            "value": "maruti swift dzire",
+            "label": "Swift Dzire"
+          },
+          {
+            "value": "maruti swift dzire tour",
+            "label": "Swift Dzire Tour"
+          },
+          {
+            "value": "maruti sx4",
+            "label": "Sx4"
+          },
+          {
+            "value": "maruti sx4 s cross",
+            "label": "Sx4 S Cross"
+          },
+          {
+            "value": "maruti versa",
+            "label": "Versa"
+          },
+          {
+            "value": "maruti vitara brezza",
+            "label": "Vitara Brezza"
+          },
+          {
+            "value": "maruti wagon r",
+            "label": "Wagon R"
+          },
+          {
+            "value": "maruti wagon r stingray",
+            "label": "Wagon R Stingray"
+          },
+          {
+            "value": "maruti xl6",
+            "label": "Xl6"
+          },
+          {
+            "value": "maruti zen",
+            "label": "Zen"
+          },
+          {
+            "value": "maruti zen estilo",
+            "label": "Zen Estilo"
+          }
+        ]
+      },
+      {
+        "value": "maserati",
+        "label": "Maserati",
+        "models": [
+          {
+            "value": "maserati ghibli",
+            "label": "Ghibli"
+          }
+        ]
+      },
+      {
+        "value": "mercedes-benz",
+        "label": "Mercedes-Benz",
+        "models": [
+          {
+            "value": "mercedes-benz a class",
+            "label": "A Class"
+          },
+          {
+            "value": "mercedes-benz b class",
+            "label": "B Class"
+          },
+          {
+            "value": "mercedes-benz c-class",
+            "label": "C-Class"
+          },
+          {
+            "value": "mercedes-benz cla",
+            "label": "Cla"
+          },
+          {
+            "value": "mercedes-benz cls-class",
+            "label": "Cls-Class"
+          },
+          {
+            "value": "mercedes-benz e-class",
+            "label": "E-Class"
+          },
+          {
+            "value": "mercedes-benz g",
+            "label": "G"
+          },
+          {
+            "value": "mercedes-benz gl-class",
+            "label": "Gl-Class"
+          },
+          {
+            "value": "mercedes-benz gla",
+            "label": "Gla"
+          },
+          {
+            "value": "mercedes-benz gla class",
+            "label": "Gla Class"
+          },
+          {
+            "value": "mercedes-benz glc",
+            "label": "Glc"
+          },
+          {
+            "value": "mercedes-benz glc coupe",
+            "label": "Glc Coupe"
+          },
+          {
+            "value": "mercedes-benz gle",
+            "label": "Gle"
+          },
+          {
+            "value": "mercedes-benz gls",
+            "label": "Gls"
+          },
+          {
+            "value": "mercedes-benz m-class",
+            "label": "M-Class"
+          },
+          {
+            "value": "mercedes-benz r-class",
+            "label": "R-Class"
+          },
+          {
+            "value": "mercedes-benz s-class",
+            "label": "S-Class"
+          },
+          {
+            "value": "mercedes-benz sl-class",
+            "label": "Sl-Class"
+          },
+          {
+            "value": "mercedes-benz slc",
+            "label": "Slc"
+          },
+          {
+            "value": "mercedes-benz slk-class",
+            "label": "Slk-Class"
+          },
+          {
+            "value": "mercedes-benz v-class",
+            "label": "V-Class"
+          }
+        ]
+      },
+      {
+        "value": "mg",
+        "label": "MG",
+        "models": [
+          {
+            "value": "mg astor",
+            "label": "Astor"
+          },
+          {
+            "value": "mg gloster",
+            "label": "Gloster"
+          },
+          {
+            "value": "mg hector",
+            "label": "Hector"
+          },
+          {
+            "value": "mg hector plus",
+            "label": "Hector Plus"
+          }
+        ]
+      },
+      {
+        "value": "mini",
+        "label": "MINI",
+        "models": [
+          {
+            "value": "mini 3 door",
+            "label": "3 Door"
+          },
+          {
+            "value": "mini 5 door",
+            "label": "5 Door"
+          },
+          {
+            "value": "mini cooper",
+            "label": "Cooper"
+          },
+          {
+            "value": "mini cooper convertible",
+            "label": "Cooper Convertible"
+          },
+          {
+            "value": "mini cooper countryman",
+            "label": "Cooper Countryman"
+          }
+        ]
+      },
+      {
+        "value": "mitsubishi",
+        "label": "Mitsubishi",
+        "models": [
+          {
+            "value": "mitsubishi cedia",
+            "label": "Cedia"
+          },
+          {
+            "value": "mitsubishi lancer",
+            "label": "Lancer"
+          },
+          {
+            "value": "mitsubishi montero",
+            "label": "Montero"
+          },
+          {
+            "value": "mitsubishi outlander",
+            "label": "Outlander"
+          },
+          {
+            "value": "mitsubishi pajero",
+            "label": "Pajero"
+          }
+        ]
+      },
+      {
+        "value": "nissan",
+        "label": "Nissan",
+        "models": [
+          {
+            "value": "nissan evalia",
+            "label": "Evalia"
+          },
+          {
+            "value": "nissan kicks",
+            "label": "Kicks"
+          },
+          {
+            "value": "nissan magnite",
+            "label": "Magnite"
+          },
+          {
+            "value": "nissan micra",
+            "label": "Micra"
+          },
+          {
+            "value": "nissan micra active",
+            "label": "Micra Active"
+          },
+          {
+            "value": "nissan sunny",
+            "label": "Sunny"
+          },
+          {
+            "value": "nissan teana",
+            "label": "Teana"
+          },
+          {
+            "value": "nissan terrano",
+            "label": "Terrano"
+          },
+          {
+            "value": "nissan x-trail",
+            "label": "X-Trail"
+          }
+        ]
+      },
+      {
+        "value": "porsche",
+        "label": "Porsche",
+        "models": [
+          {
+            "value": "porsche 718",
+            "label": "718"
+          },
+          {
+            "value": "porsche cayenne",
+            "label": "Cayenne"
+          },
+          {
+            "value": "porsche macan",
+            "label": "Macan"
+          },
+          {
+            "value": "porsche panamera",
+            "label": "Panamera"
+          }
+        ]
+      },
+      {
+        "value": "premier",
+        "label": "Premier",
+        "models": [
+          {
+            "value": "premier rio",
+            "label": "Rio"
+          }
+        ]
+      },
+      {
+        "value": "renault",
+        "label": "Renault",
+        "models": [
+          {
+            "value": "renault captur",
+            "label": "Captur"
+          },
+          {
+            "value": "renault duster",
+            "label": "Duster"
+          },
+          {
+            "value": "renault fluence",
+            "label": "Fluence"
+          },
+          {
+            "value": "renault kiger",
+            "label": "Kiger"
+          },
+          {
+            "value": "renault kwid",
+            "label": "Kwid"
+          },
+          {
+            "value": "renault lodgy",
+            "label": "Lodgy"
+          },
+          {
+            "value": "renault pulse",
+            "label": "Pulse"
+          },
+          {
+            "value": "renault scala",
+            "label": "Scala"
+          },
+          {
+            "value": "renault triber",
+            "label": "Triber"
+          }
+        ]
+      },
+      {
+        "value": "skoda",
+        "label": "Skoda",
+        "models": [
+          {
+            "value": "skoda fabia",
+            "label": "Fabia"
+          },
+          {
+            "value": "skoda kodiaq",
+            "label": "Kodiaq"
+          },
+          {
+            "value": "skoda kushaq",
+            "label": "Kushaq"
+          },
+          {
+            "value": "skoda new laura",
+            "label": "New Laura"
+          },
+          {
+            "value": "skoda octavia",
+            "label": "Octavia"
+          },
+          {
+            "value": "skoda rapid",
+            "label": "Rapid"
+          },
+          {
+            "value": "skoda slavia",
+            "label": "Slavia"
+          },
+          {
+            "value": "skoda superb",
+            "label": "Superb"
+          },
+          {
+            "value": "skoda yeti",
+            "label": "Yeti"
+          }
+        ]
+      },
+      {
+        "value": "tata",
+        "label": "Tata",
+        "models": [
+          {
+            "value": "tata altroz",
+            "label": "Altroz"
+          },
+          {
+            "value": "tata aria",
+            "label": "Aria"
+          },
+          {
+            "value": "tata bolt",
+            "label": "Bolt"
+          },
+          {
+            "value": "tata harrier",
+            "label": "Harrier"
+          },
+          {
+            "value": "tata hexa",
+            "label": "Hexa"
+          },
+          {
+            "value": "tata indica",
+            "label": "Indica"
+          },
+          {
+            "value": "tata indica ev2",
+            "label": "Indica Ev2"
+          },
+          {
+            "value": "tata indica xeta",
+            "label": "Indica Xeta"
+          },
+          {
+            "value": "tata indigo",
+            "label": "Indigo"
+          },
+          {
+            "value": "tata indigo marina",
+            "label": "Indigo Marina"
+          },
+          {
+            "value": "tata manza",
+            "label": "Manza"
+          },
+          {
+            "value": "tata nano",
+            "label": "Nano"
+          },
+          {
+            "value": "tata new safari",
+            "label": "New Safari"
+          },
+          {
+            "value": "tata nexon",
+            "label": "Nexon"
+          },
+          {
+            "value": "tata punch",
+            "label": "Punch"
+          },
+          {
+            "value": "tata safari storme",
+            "label": "Safari Storme"
+          },
+          {
+            "value": "tata sumo",
+            "label": "Sumo"
+          },
+          {
+            "value": "tata sumo victa",
+            "label": "Sumo Victa"
+          },
+          {
+            "value": "tata tiago",
+            "label": "Tiago"
+          },
+          {
+            "value": "tata tiago nrg",
+            "label": "Tiago Nrg"
+          },
+          {
+            "value": "tata tigor",
+            "label": "Tigor"
+          },
+          {
+            "value": "tata venture",
+            "label": "Venture"
+          },
+          {
+            "value": "tata winger",
+            "label": "Winger"
+          },
+          {
+            "value": "tata xenon xt",
+            "label": "Xenon Xt"
+          },
+          {
+            "value": "tata zest",
+            "label": "Zest"
+          }
+        ]
+      },
+      {
+        "value": "toyota",
+        "label": "Toyota",
+        "models": [
+          {
+            "value": "toyota camry",
+            "label": "Camry"
+          },
+          {
+            "value": "toyota corolla",
+            "label": "Corolla"
+          },
+          {
+            "value": "toyota corolla altis",
+            "label": "Corolla Altis"
+          },
+          {
+            "value": "toyota etios",
+            "label": "Etios"
+          },
+          {
+            "value": "toyota etios 2014-2016",
+            "label": "Etios 2014-2016"
+          },
+          {
+            "value": "toyota etios cross",
+            "label": "Etios Cross"
+          },
+          {
+            "value": "toyota etios liva",
+            "label": "Etios Liva"
+          },
+          {
+            "value": "toyota fortuner",
+            "label": "Fortuner"
+          },
+          {
+            "value": "toyota glanza",
+            "label": "Glanza"
+          },
+          {
+            "value": "toyota innova",
+            "label": "Innova"
+          },
+          {
+            "value": "toyota innova crysta",
+            "label": "Innova Crysta"
+          },
+          {
+            "value": "toyota land cruiser",
+            "label": "Land Cruiser"
+          },
+          {
+            "value": "toyota platinum etios",
+            "label": "Platinum Etios"
+          },
+          {
+            "value": "toyota qualis",
+            "label": "Qualis"
+          },
+          {
+            "value": "toyota urban cruiser",
+            "label": "Urban Cruiser"
+          },
+          {
+            "value": "toyota vellfire",
+            "label": "Vellfire"
+          },
+          {
+            "value": "toyota yaris",
+            "label": "Yaris"
+          }
+        ]
+      },
+      {
+        "value": "volkswagen",
+        "label": "Volkswagen",
+        "models": [
+          {
+            "value": "volkswagen ameo",
+            "label": "Ameo"
+          },
+          {
+            "value": "volkswagen crosspolo",
+            "label": "Crosspolo"
+          },
+          {
+            "value": "volkswagen jetta",
+            "label": "Jetta"
+          },
+          {
+            "value": "volkswagen passat",
+            "label": "Passat"
+          },
+          {
+            "value": "volkswagen polo",
+            "label": "Polo"
+          },
+          {
+            "value": "volkswagen t-roc",
+            "label": "T-Roc"
+          },
+          {
+            "value": "volkswagen taigun",
+            "label": "Taigun"
+          },
+          {
+            "value": "volkswagen tiguan",
+            "label": "Tiguan"
+          },
+          {
+            "value": "volkswagen vento",
+            "label": "Vento"
+          },
+          {
+            "value": "volkswagen virtus",
+            "label": "Virtus"
+          }
+        ]
+      },
+      {
+        "value": "volvo",
+        "label": "Volvo",
+        "models": [
+          {
+            "value": "volvo s 80",
+            "label": "S 80"
+          },
+          {
+            "value": "volvo s60",
+            "label": "S60"
+          },
+          {
+            "value": "volvo s60 cross country",
+            "label": "S60 Cross Country"
+          },
+          {
+            "value": "volvo s90",
+            "label": "S90"
+          },
+          {
+            "value": "volvo v40",
+            "label": "V40"
+          },
+          {
+            "value": "volvo v40 cross country",
+            "label": "V40 Cross Country"
+          },
+          {
+            "value": "volvo v90 cross country",
+            "label": "V90 Cross Country"
+          },
+          {
+            "value": "volvo xc 90",
+            "label": "Xc 90"
+          },
+          {
+            "value": "volvo xc40",
+            "label": "Xc40"
+          },
+          {
+            "value": "volvo xc60",
+            "label": "Xc60"
+          },
+          {
+            "value": "volvo xc90",
+            "label": "Xc90"
+          }
+        ]
+      }
+    ],
+    "fuel_options": [
+      "cng",
+      "diesel",
+      "electric",
+      "lpg",
+      "petrol"
+    ],
+    "transmission_options": [
+      "automatic",
+      "manual"
+    ],
+    "owner_options": [
+      "fifth",
+      "first",
+      "fourth",
+      "second",
+      "third",
+      "unregistered car"
+    ],
+    "city_options": [
+      "agra",
+      "ahmedabad",
+      "ahmednagar",
+      "aligarh",
+      "allahabad",
+      "ambala",
+      "amritsar",
+      "anand",
+      "aurangabad",
+      "bangalore",
+      "bareilly",
+      "bathinda",
+      "belgaum",
+      "bharuch",
+      "bhopal",
+      "bhubaneswar",
+      "bikaner",
+      "bokaro",
+      "chandigarh",
+      "chennai",
+      "coimbatore",
+      "cuttack",
+      "dehradun",
+      "faridabad",
+      "firozabad",
+      "gandhidham",
+      "ghaziabad",
+      "gorakhpur",
+      "greater noida",
+      "guntur",
+      "gurgaon",
+      "guwahati",
+      "gwalior",
+      "haldwani",
+      "hisar",
+      "howrah",
+      "hubli",
+      "hyderabad",
+      "indore",
+      "jabalpur",
+      "jaipur",
+      "jalandhar",
+      "jammu",
+      "jamnagar",
+      "jhansi",
+      "jodhpur",
+      "kanpur",
+      "karnal",
+      "kochi",
+      "kolhapur",
+      "kolkata",
+      "kota",
+      "kottayam",
+      "lucknow",
+      "ludhiana",
+      "madurai",
+      "mathura",
+      "meerut",
+      "mira road",
+      "moradabad",
+      "mumbai",
+      "mysore",
+      "nagpur",
+      "nashik",
+      "navi mumbai",
+      "new delhi",
+      "noida",
+      "other",
+      "palakkad",
+      "panipat",
+      "patiala",
+      "patna",
+      "pimpri chinchwad",
+      "pondicherry",
+      "pune",
+      "raipur",
+      "rajahmundry",
+      "rajkot",
+      "ranchi",
+      "ranga reddy",
+      "rewari",
+      "rohtak",
+      "rudrapur",
+      "satna",
+      "sirsa",
+      "solapur",
+      "sonipat",
+      "srinagar",
+      "surat",
+      "thane",
+      "thiruvananthapuram",
+      "thrissur",
+      "tiruchirappalli",
+      "udaipur",
+      "ujjain",
+      "vadodara",
+      "varanasi",
+      "vellore",
+      "vijayawada",
+      "visakhapatnam",
+      "zirakpur"
+    ],
+    "seller_options": [
+      "dealer",
+      "individual"
+    ],
+    "limits": {
+      "vehicle_age": {
+        "min": 3.0,
+        "max": 40.0
+      },
+      "km_driven": {
+        "min": 120.0,
+        "max": 219865
+      },
+      "mileage": {
+        "min": 7.08,
+        "max": 42.0
+      },
+      "seating_capacity": {
+        "min": 2.0,
+        "max": 14.0
+      },
+      "horsepower": {
+        "min": 32.5,
+        "max": 659.78
+      },
+      "engine_cc": {
+        "min": 624.0,
+        "max": 5998.0
+      }
+    },
+    "seating_options": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      14
+    ],
+    "reference_year": 2026
+  }
+}
